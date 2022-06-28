@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_LoginHistory">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#5CE1FE"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/imgbutton_fragmentLoginHistory_Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/back_icon" />
+
+            <TextView
+                android:id="@+id/textview_fragmentLoginHistory_Lichsudangnhap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/imgbutton_fragmentLoginHistory_Back"
+                android:fontFamily="sans-serif-thin"
+                android:text="Lịch sử đăng nhập"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_fragmentLoginHistory_ListDevice"
+            android:layout_width="match_parent"
+            android:layout_height="670dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview_fragmentLoginHistory_Danhsachthietbi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="Danh sách thiết bị"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/lsv_fragmentLoginHistory_ListDevice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+
+
+</LinearLayout>

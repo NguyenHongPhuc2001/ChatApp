@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment_Friends">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_fragmentFriend_Search"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="#5CE1FE">
+
+        <TextView
+            android:id="@+id/textview_fragmentFriend_Friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bạn bè"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-thin"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_fragmentFriend_AddIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/add_icon"
+            app:layout_constraintBottom_toTopOf="@+id/cardview_fragmentFriend_Search"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintLeft_toRightOf="@+id/textview_fragmentFriend_Friends"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_fragmentFriend_Search"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#2D9EB7"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_fragmentFriend_Friends">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchview_fragmentFriend_SearchFriend"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                app:defaultQueryHint="Search..."
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/white"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ListView
+        android:id="@+id/lsv_fragmentFriend_ListFriends"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp"
+        android:background="@color/white" />
+
+</FrameLayout>

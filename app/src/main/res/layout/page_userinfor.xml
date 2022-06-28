@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_PageUserInfor_Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/img_PageUserInfor_CoverImage"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/upload"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleimg_PageUserInfor_Avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/upload"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="110dp"/>
+
+        <ImageButton
+            android:id="@+id/imgbutton_PageUserInfor_Back"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/back_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@android:color/transparent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_PageUserInfor_Body"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_PageUserInfor_Header">
+
+        <TextView
+            android:id="@+id/textview_PageUserInfor_Username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên Zalo"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:layout_marginTop="37dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <EditText
+            android:id="@+id/edittext_PageUserInfor_Username"
+            android:layout_width="260dp"
+            android:layout_height="45dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/textview_PageUserInfor_Phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Điện thoại"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:layout_marginTop="35dp"
+            app:layout_constraintTop_toBottomOf="@+id/textview_PageUserInfor_Username"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <EditText
+            android:id="@+id/edittext_PageUserInfor_Phone"
+            android:layout_width="260dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_PageUserInfor_Username"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="45dp"/>
+
+        <TextView
+            android:id="@+id/textview_PageUserInfor_Age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tuổi"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@+id/textview_PageUserInfor_Phone"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <EditText
+            android:id="@+id/edittext_PageUserInfor_Age"
+            android:layout_width="260dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_PageUserInfor_Phone"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="45dp"/>
+
+        <TextView
+            android:id="@+id/textview_PageUserInfor_DoB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày Sinh"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:layout_marginTop="39dp"
+            app:layout_constraintTop_toBottomOf="@+id/textview_PageUserInfor_Age"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <EditText
+            android:id="@+id/edittext_PageUserInfor_DoB"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="23dp"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_PageUserInfor_Age"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageButton
+            android:id="@+id/imgbutton_PageUserInfor_Calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calendar_icon"
+            android:background="@android:color/transparent"
+            app:layout_constraintVertical_bias="0.45"
+            app:layout_constraintHorizontal_bias="0.58"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_PageUserInfor_Age"
+            app:layout_constraintLeft_toRightOf="@+id/textview_PageUserInfor_DoB"
+            app:layout_constraintRight_toLeftOf="@+id/edittext_PageUserInfor_DoB"
+            app:layout_constraintBottom_toTopOf="@+id/edittext_PageUserInfor_Sex"/>
+
+        <TextView
+            android:id="@+id/textview_PageUserInfor_Sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giới tính"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:layout_marginTop="35dp"
+            app:layout_constraintTop_toBottomOf="@+id/textview_PageUserInfor_DoB"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <EditText
+            android:id="@+id/edittext_PageUserInfor_Sex"
+            android:layout_width="260dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="23dp"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_PageUserInfor_DoB"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="45dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/button_PageUserInfor_Update"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_button_2"
+        android:text="Cập nhật thông tin"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_PageUserInfor_Body" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

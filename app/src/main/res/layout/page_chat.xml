@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_PageChat_OptionBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#5CE1FE"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_PageChat_BackIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/back_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_PageChat_OpponentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Tên đối phương"
+            android:textColor="@color/white"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintLeft_toRightOf="@+id/img_PageChat_BackIcon"
+            app:layout_constraintRight_toLeftOf="@+id/circleimg_PageChat_imgOpponent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleimg_PageChat_imgOpponent"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/anh_dai_dien"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_PageChat_ListMessages"
+        android:layout_width="match_parent"
+        android:layout_height="630dp"
+        android:background="#e9ecef"
+        app:layout_constraintBottom_toTopOf="@+id/layout_PageChat_TypeMessage" />
+
+
+    <TextView
+        android:id="@+id/textview_PageChat_Hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Hãy gửi lời chào đến đối phương !"
+        android:textSize="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/layout_PageChat_TypeMessage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/layout_PageChat_TypeMessage"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/img_PageChat_Record"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/img_PageChat_Gallery"
+            android:background="@android:color/transparent"
+            android:src="@drawable/microphone_icon" />
+
+        <ImageButton
+            android:id="@+id/img_PageChat_Gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="7dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/gallery_icon" />
+
+        <EditText
+            android:id="@+id/edittext_PageChat_TypeChats"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:hint="Type message here"
+            android:textColor="#8d99ae" />
+
+        <ImageButton
+            android:id="@+id/imageButton_PageChat_Send"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_toEndOf="@+id/edittext_PageChat_TypeChats"
+            android:background="@android:color/transparent"
+            android:src="@drawable/send_icon" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

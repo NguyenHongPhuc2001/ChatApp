@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment_Settings">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layaout_fragmentSetting_TopPage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#5CE1FE"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textview_fragmentSetting_Settings"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center_vertical"
+                android:text="Cài đặt"
+                android:textColor="@color/white"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_fragmentSetting_BodyPage"
+            android:layout_width="match_parent"
+            android:layout_height="675dp"
+            android:background="#edf2f4"
+            app:layout_constraintTop_toBottomOf="@+id/layaout_fragmentSetting_TopPage">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_fragmentSetting_User"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circleimg_fragmentSetting_UserImage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/anh_dai_dien"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textview_fragmentSetting_Username"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tên người dùng"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    app:layout_constraintLeft_toRightOf="@+id/circleimg_fragmentSetting_UserImage"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0." />
+
+                <TextView
+                    android:id="@+id/textview_fragmentSetting_PhoneNumber"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Xem trang cá nhân"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    app:layout_constraintLeft_toRightOf="@+id/circleimg_fragmentSetting_UserImage"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_fragmentSetting_Username"
+                    app:layout_constraintVertical_bias="0.2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_fragmentSetting_LoginHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/layout_fragmentSetting_User">
+
+                <ImageView
+                    android:id="@+id/img_fragmentSetting_LoginHistory"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/arrow_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <Button
+                    android:id="@+id/button_fragmentSetting_LoginHistory"
+                    android:layout_width="290dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:background="@android:color/transparent"
+                    android:text="Lịch sử đăng nhập"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_fragmentSetting_Logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/layout_fragmentSetting_LoginHistory"
+                tools:layout_editor_absoluteY="300dp">
+
+                <ImageView
+                    android:id="@+id/img_fragmentSetting_Logout"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/arrow_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button_fragmentSetting_Logout"
+                    android:layout_width="290dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:background="@android:color/transparent"
+                    android:text="Đăng xuất"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

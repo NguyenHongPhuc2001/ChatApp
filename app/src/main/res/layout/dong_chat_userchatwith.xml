@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="7dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_dongChatFriends_ImageFriend"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="20dp"
+        android:src="@drawable/anh_dai_dien"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/textview_dongChatFriends_FriendName"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="Nguyễn Hồng Phúc"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toRightOf="@id/img_dongChatFriends_ImageFriend"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"/>
+
+    <TextView
+        android:id="@+id/textview_dongChatFriends_LastMessage"
+        android:layout_width="300dp"
+        android:layout_height="18dp"
+        android:text="Last Message"
+        android:textAlignment="textStart"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_dongChatFriends_FriendName"
+         />
+
+    <ImageView
+        android:id="@+id/img_dongChatFriends_Status"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:src="@drawable/status_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="#dee2e6">
+
+    <ImageButton
+        android:id="@+id/img_Gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/gallery_icon_2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/img_Camera"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="30dp"/>
+
+    <TextView
+        android:id="@+id/textview_Gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gallery"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/textview_Camera"
+        app:layout_constraintTop_toBottomOf="@+id/img_Gallery"
+        android:layout_marginRight="30dp"/>
+
+    <ImageButton
+        android:id="@+id/img_Camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/camera_icon"
+        app:layout_constraintLeft_toRightOf="@+id/img_Gallery"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/textview_Camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camera"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toRightOf="@+id/textview_Gallery"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_Camera"
+        android:layout_marginLeft="20dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textview_PageLogin_Zalo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Zalo"
+        android:textSize="85dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:textColor="#5CE1FE"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"/>
+
+
+    <TextView
+        android:id="@+id/textview_PageLogin_DangNhapZalo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textview_PageLogin_Zalo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Đăng Nhập "
+        android:textSize="35dp"
+        app:layout_constraintHorizontal_bias="0.2"
+        android:textColor="#5CE1FE"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_PageLogin_Sodienthoai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textview_PageLogin_DangNhapZalo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="40dp"
+        app:cardBackgroundColor="#FFFF">
+
+        <EditText
+            android:id="@+id/edittext_PageLogin_Sodienthoai"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:hint="Số điện thoại"
+            android:textSize="25dp"
+            android:background="@drawable/custom_button_4"
+            android:paddingLeft="15dp" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_PageLogin_Matkhau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cardview_PageLogin_Sodienthoai"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="50dp"
+        app:cardBackgroundColor="#FFFF">
+
+        <EditText
+            android:id="@+id/edittext_PageLogin_Matkhau"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:hint="Mật khẩu"
+            android:textSize="25dp"
+            android:inputType="textPassword"
+            android:background="@drawable/custom_button_4"
+            android:paddingLeft="15dp" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button_PageLogin_DangNhap"
+        android:layout_width="270dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardview_PageLogin_Matkhau"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="đăng nhập"
+        android:background="@drawable/custom_button_2"
+        android:textSize="35dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/button_PageLogin_DangKy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_PageLogin_DangNhap"
+        android:text="Đăng ký"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:textStyle="normal"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
